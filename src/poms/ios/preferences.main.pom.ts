@@ -16,8 +16,6 @@ const elements = (app: App): Elements => {
     }
 }
 
-
- 
 export class iosPreferencesMainPom extends BasePom<Elements> {
     
     constructor(app: App) {
