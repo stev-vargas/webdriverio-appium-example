@@ -1,7 +1,7 @@
 
 import assert from "assert";
-import { App, getCapabilities } from "../app";
-import { iosPreferencesMainPom } from "../poms/ios/preferences.main.pom";
+import { App, getCapabilities } from "../../app";
+import { iosPreferencesMainPom } from "../../poms/ios/preferences.main.pom";
 
 
 const capabilities = getCapabilities("ios");

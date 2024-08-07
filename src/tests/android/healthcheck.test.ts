@@ -1,5 +1,5 @@
-import { App, getCapabilities } from "../app"
-import { AndroidSettingsPom } from "../poms/android/settings.pom";
+import { App, getCapabilities } from "../../app"
+import { AndroidSettingsPom } from "../../poms/android/settings.pom";
 
 const capabilities = getCapabilities("android")
 
