@@ -2,13 +2,7 @@ import { App } from "../../app";
 import { BasePom } from "../base.pom";
 import { iOSelement, iosElements } from "./base.ios.pom";
 
-interface Elements {
-    general: iOSelement;
-    about: iOSelement;
-    version: iOSelement;
-}
-
-const elements = (app: App): Elements => {
+const elements = (app: App) => {
     return {
         general: new iOSelement(app, "TypeCell[@name='General']"),
         about: new iOSelement(app, "TypeCell[@name='About']"),
@@ -16,7 +10,7 @@ const elements = (app: App): Elements => {
     }
 }
 
-export class iosPreferencesMainPom extends BasePom<Elements> {
+export class iosPreferencesMainPom extends BasePom<ReturnType<typeof elements>> {
     
     constructor(app: App) {
         super(app, elements(app));

@@ -1,8 +1,6 @@
 import { App } from "../../app"
 import { BaseElement } from "../base.pom"
 
-
-
 export class iOSelement extends BaseElement {
     constructor(protected app: App, protected path: string) {
         super(app, `//XCUIElement${path}`)

@@ -2,14 +2,7 @@ import { App } from "../../app";
 import { BasePom } from "../base.pom";
 import { androidElement } from "./base.android.pom";
 
-interface Elements {
-    imageButton: androidElement;
-    editText: androidElement;
-    linearLayout: androidElement;
-    progressBar: androidElement;
-}
-
-const elements = (app: App): Elements => {
+const elements = (app: App) => {
     return {
         imageButton: new androidElement(app, "android.widget.ImageButton"),
         editText: new androidElement(app, "android=new UiSelector().className(android.widget.EditText)"),
@@ -18,7 +11,7 @@ const elements = (app: App): Elements => {
     }
 }
 
-export class AndroidSettingsPom extends BasePom<Elements> {
+export class AndroidSettingsPom extends BasePom<ReturnType<typeof elements>> {
     constructor(app: App) {
         super(app, elements(app))
     }
